@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Linkedin, Twitter, Github, Mail } from 'lucide-react'
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/codecentra', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/codecentra-sweden-ab/', icon: Linkedin },
   { name: 'Email', href: 'mailto:contact@codecentra.se', icon: Mail },
 ]
 
