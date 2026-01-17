@@ -2,63 +2,129 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const video2Ref = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video1 = videoRef.current
+    const video2 = video2Ref.current
+    if (!video1 || !video2) return
+
+    // Slow motion - 0.3 = very slow, 0.5 = half speed
+    const playbackSpeed = 0.35
+    video1.playbackRate = playbackSpeed
+    video2.playbackRate = playbackSpeed
+
+    let isTransitioning = false
+
+    const handleTimeUpdate = () => {
+      // Start crossfade 1.5 seconds before end for smoother transition
+      const timeRemaining = video1.duration - video1.currentTime
+
+      if (timeRemaining < 1.5 && !isTransitioning) {
+        isTransitioning = true
+        video2.currentTime = 0
+        video2.play()
+        // Gradual fade in
+        video2.style.opacity = '1'
+      }
+    }
+
+    const handleEnded = () => {
+      // Swap videos - video2 becomes the main one
+      video1.currentTime = 0
+      video1.style.opacity = '0'
+
+      // After transition completes, reset for next loop
+      setTimeout(() => {
+        video1.play()
+        isTransitioning = false
+        // Prepare for next swap
+        setTimeout(() => {
+          video1.style.opacity = '1'
+          video2.style.opacity = '0'
+        }, 1000)
+      }, 500)
+    }
+
+    video1.addEventListener('timeupdate', handleTimeUpdate)
+    video1.addEventListener('ended', handleEnded)
+
+    return () => {
+      video1.removeEventListener('timeupdate', handleTimeUpdate)
+      video1.removeEventListener('ended', handleEnded)
+    }
+  }, [])
+
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex flex-col md:flex-row md:items-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           autoPlay
-          loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-primary-900/50" />
+        {/* Second video for seamless loop */}
+        <video
+          ref={video2Ref}
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+          style={{ opacity: 0 }}
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
+        {/* White overlay - gradient from bottom on mobile, from left on desktop */}
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0) 60%)'
+          }}
+        />
+        <div
+          className="absolute inset-0 md:hidden"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.9) 60%, rgba(255,255,255,1) 75%)'
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Software & IT Solutions
-              <br />
-              for Enterprise
-            </h1>
-          </motion.div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 mt-auto md:mt-0 pt-48 pb-10 md:pt-20 md:pb-0">
+        <motion.div
+          className="max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-900 leading-tight mb-4 md:mb-6">
+            Software & IT Solutions
+            <br />
+            for Enterprise
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="text-base sm:text-lg text-slate-300 max-w-xl mb-8"
-          >
+          <p className="text-base sm:text-lg text-gray-600 max-w-xl mb-6 md:mb-8">
             Microservices, Kubernetes, and Cloud-Native
             solutions for modern organizations.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
+          <Link
+            href="#contact"
+            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-accent-500 rounded-md hover:bg-accent-600 transition-colors"
           >
-            <Link
-              href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-primary-900 bg-accent-400 rounded-md hover:bg-accent-300 transition-colors"
-            >
-              Schedule a Consultation
-            </Link>
-          </motion.div>
-        </div>
+            Schedule a Consultation
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

@@ -7,37 +7,16 @@ import { Linkedin, Twitter, Github, Mail } from 'lucide-react'
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/codecentra', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/codecentra', icon: Twitter },
-  { name: 'GitHub', href: 'https://github.com/codecentra', icon: Github },
-  { name: 'Email', href: 'mailto:contact@codecentra.com', icon: Mail },
+  { name: 'Email', href: 'mailto:contact@codecentra.se', icon: Mail },
 ]
 
 const footerLinks = [
   {
-    title: 'Services',
+    title: 'Navigation',
     links: [
-      { name: 'Microservices', href: '#services' },
-      { name: 'Kubernetes', href: '#services' },
-      { name: 'Cloud-Native', href: '#services' },
-      { name: 'DevOps', href: '#services' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { name: 'About', href: '#about' },
+      { name: 'Services', href: '#services' },
       { name: 'Expertise', href: '#expertise' },
-      { name: 'Careers', href: '#careers' },
       { name: 'Contact', href: '#contact' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Blog', href: '#blog' },
-      { name: 'Case Studies', href: '#cases' },
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Support', href: '#support' },
     ],
   },
 ]
@@ -47,7 +26,7 @@ export default function Footer() {
     <footer className="bg-primary-950 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 lg:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="py-12 lg:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <motion.div
@@ -120,19 +99,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-primary-800">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-primary-400 text-sm">
-              &copy; {new Date().getFullYear()} CodeCentra. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <Link href="#privacy" className="text-primary-400 hover:text-accent-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#terms" className="text-primary-400 hover:text-accent-400 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+          <p className="text-primary-400 text-sm text-center">
+            &copy; {new Date().getFullYear()} CodeCentra. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
