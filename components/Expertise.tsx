@@ -51,7 +51,7 @@ const expertise = [
 
 export default function Expertise() {
   return (
-    <section id="expertise" className="py-24 bg-white">
+    <section id="expertise" className="py-24 bg-white dark:bg-primary-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,10 +60,10 @@ export default function Expertise() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 dark:text-white mb-4">
             Our Expertise
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
             Deep technical knowledge across the full stack of modern enterprise infrastructure
           </p>
         </motion.div>
@@ -77,20 +77,20 @@ export default function Expertise() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-primary-900 transition-all duration-500"
+              className="group relative bg-gray-50 dark:bg-primary-900 rounded-2xl p-8 hover:bg-primary-900 dark:hover:bg-primary-800 transition-all duration-500"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-accent-100 group-hover:bg-accent-500 flex items-center justify-center mb-6 transition-colors duration-500">
-                <item.icon className="w-6 h-6 text-accent-600 group-hover:text-white transition-colors duration-500" />
+              <div className="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/30 group-hover:bg-accent-500 flex items-center justify-center mb-6 transition-colors duration-500">
+                <item.icon className="w-6 h-6 text-accent-600 dark:text-accent-400 group-hover:text-white transition-colors duration-500" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-primary-900 group-hover:text-white mb-3 transition-colors duration-500">
+              <h3 className="text-xl font-bold text-primary-900 dark:text-white group-hover:text-white mb-3 transition-colors duration-500">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 group-hover:text-gray-300 mb-6 transition-colors duration-500">
+              <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-300 mb-6 transition-colors duration-500">
                 {item.description}
               </p>
 
@@ -99,7 +99,7 @@ export default function Expertise() {
                 {item.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs font-medium bg-white group-hover:bg-primary-800 text-primary-700 group-hover:text-accent-400 rounded-full transition-colors duration-500"
+                    className="px-3 py-1 text-xs font-medium bg-white dark:bg-primary-800 group-hover:bg-primary-800 dark:group-hover:bg-primary-700 text-primary-700 dark:text-gray-300 group-hover:text-accent-400 rounded-full transition-colors duration-500"
                   >
                     {skill}
                   </span>

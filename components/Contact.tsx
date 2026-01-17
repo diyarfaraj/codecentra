@@ -19,7 +19,7 @@ export default function Contact() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
 
           <p className="text-lg text-primary-300 mb-10">

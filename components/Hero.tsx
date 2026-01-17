@@ -84,17 +84,29 @@ export default function Hero() {
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* White overlay - gradient from bottom on mobile, from left on desktop */}
+        {/* White/Dark overlay - gradient from bottom on mobile, from left on desktop */}
         <div
-          className="absolute inset-0 hidden md:block"
+          className="absolute inset-0 hidden md:block dark:hidden"
           style={{
             background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0) 60%)'
           }}
         />
         <div
-          className="absolute inset-0 md:hidden"
+          className="absolute inset-0 hidden md:dark:block"
+          style={{
+            background: 'linear-gradient(to right, rgba(15,30,51,1) 0%, rgba(15,30,51,1) 35%, rgba(15,30,51,0.8) 45%, rgba(15,30,51,0) 60%)'
+          }}
+        />
+        <div
+          className="absolute inset-0 md:hidden dark:hidden"
           style={{
             background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0.9) 60%, rgba(255,255,255,1) 75%)'
+          }}
+        />
+        <div
+          className="absolute inset-0 md:hidden hidden dark:block"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(15,30,51,0) 0%, rgba(15,30,51,0.3) 40%, rgba(15,30,51,0.9) 60%, rgba(15,30,51,1) 75%)'
           }}
         />
       </div>
@@ -107,13 +119,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-900 leading-tight mb-4 md:mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-900 dark:text-white leading-tight mb-4 md:mb-6">
             Software & IT Solutions
             <br />
             for Enterprise
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-600 max-w-xl mb-6 md:mb-8">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-6 md:mb-8">
             Microservices, Kubernetes, and Cloud-Native
             solutions for modern organizations.
           </p>

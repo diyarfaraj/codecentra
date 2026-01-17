@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply antialiased text-primary-900;
+    @apply antialiased text-primary-900 dark:text-gray-100 bg-white dark:bg-primary-950;
   }
 }
 

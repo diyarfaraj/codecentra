@@ -45,7 +45,7 @@ const services = [
 
 export default function ClientLogos() {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50 dark:bg-primary-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,10 +54,10 @@ export default function ClientLogos() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-primary-900 mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold text-primary-900 dark:text-white mb-3">
             What We Do
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Comprehensive solutions for modern enterprise infrastructure
           </p>
         </motion.div>
@@ -71,15 +71,15 @@ export default function ClientLogos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+              className="group flex flex-col items-center text-center p-6 bg-white dark:bg-primary-800 rounded-xl shadow-sm hover:shadow-md dark:shadow-primary-900/50 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-accent-50 flex items-center justify-center mb-4 group-hover:bg-accent-100 transition-colors">
-                <service.icon className="w-7 h-7 text-accent-500" />
+              <div className="w-14 h-14 rounded-full bg-accent-50 dark:bg-accent-900/30 flex items-center justify-center mb-4 group-hover:bg-accent-100 dark:group-hover:bg-accent-900/50 transition-colors">
+                <service.icon className="w-7 h-7 text-accent-500 dark:text-accent-400" />
               </div>
-              <h3 className="font-semibold text-primary-900 text-sm mb-1">
+              <h3 className="font-semibold text-primary-900 dark:text-white text-sm mb-1">
                 {service.name}
               </h3>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 {service.description}
               </p>
             </motion.div>
