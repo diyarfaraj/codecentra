@@ -31,7 +31,7 @@ export default function Header() {
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[100px]">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <motion.div
@@ -42,9 +42,9 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="CodeCentra - Enterprise IT Consulting"
-                width={600}
-                height={150}
-                className="h-[120px] w-auto"
+                width={240}
+                height={60}
+                className="h-10 sm:h-11 md:h-12 w-auto"
                 priority
               />
             </motion.div>

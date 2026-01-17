@@ -11,11 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://codecentra.com'),
   title: {
-    default: 'CodeCentra | World-Class Backend Infrastructure Consulting',
+    default: 'CodeCentra | Software & IT Solutions for Enterprise',
     template: '%s | CodeCentra',
   },
   description:
-    'CodeCentra architects resilient backend infrastructures for global enterprises. Specialized consulting in Microservices, Kubernetes, and Cloud-Native Solutions for large-scale industries.',
+    'Software and IT solutions for enterprise. Specialized in Microservices, Kubernetes, and Cloud-Native development.',
   keywords: [
     'backend infrastructure',
     'microservices consulting',
@@ -50,23 +50,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://codecentra.com',
     siteName: 'CodeCentra',
-    title: 'CodeCentra | World-Class Backend Infrastructure Consulting',
+    title: 'CodeCentra | Software & IT Solutions for Enterprise',
     description:
-      'Architecting resilient backend infrastructures for global enterprises. Specialized in Microservices, Kubernetes, and Cloud-Native Solutions.',
+      'Software and IT solutions for enterprise. Microservices, Kubernetes, and Cloud-Native development.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'CodeCentra - World-Class IT Consultants',
+        alt: 'CodeCentra - Software & IT Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CodeCentra | World-Class Backend Infrastructure Consulting',
+    title: 'CodeCentra | Software & IT Solutions for Enterprise',
     description:
-      'Architecting resilient backend infrastructures for global enterprises.',
+      'Software and IT solutions for enterprise organizations.',
     images: ['/og-image.png'],
     creator: '@codecentra',
   },
@@ -86,7 +86,7 @@ const jsonLd = {
   '@type': 'Organization',
   name: 'CodeCentra',
   description:
-    'World-class IT consultants specializing in backend infrastructure, Microservices, Kubernetes, and Cloud-Native Solutions.',
+    'Software and IT solutions for enterprise. Specializing in Microservices, Kubernetes, and Cloud-Native development.',
   url: 'https://codecentra.com',
   logo: 'https://codecentra.com/logo.png',
   sameAs: [

@@ -59,17 +59,17 @@ export default function Footer() {
               {/* Logo */}
               <Link href="/" className="inline-block mb-4">
                 <Image
-                  src="/images/logo.png"
-                  alt="CodeCentra - Enterprise IT Consulting"
-                  width={180}
-                  height={45}
-                  className="h-10 w-auto brightness-0 invert"
+                  src="/images/logo-transparent.png"
+                  alt="CodeCentra - Software & IT Solutions"
+                  width={240}
+                  height={60}
+                  className="h-10 sm:h-11 md:h-12 w-auto brightness-0 invert"
                 />
               </Link>
 
               <p className="text-primary-300 text-sm max-w-sm mb-6">
-                Architecting resilient backend infrastructures for global enterprises.
-                Trusted by industry leaders worldwide.
+                Software and IT solutions for enterprise.
+                Trusted by industry leaders.
               </p>
 
               {/* Social Links */}
