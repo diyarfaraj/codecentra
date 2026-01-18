@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "CodeCentra | Mjukvaru- & IT-lösningar för företag",
+    "titleTemplate": "{title} | CodeCentra",
+    "description": "Mjukvaru- och IT-lösningar för företag. Specialiserade inom Microservices, Kubernetes och Cloud-Native utveckling.",
+    "ogDescription": "Mjukvaru- och IT-lösningar för företag. Microservices, Kubernetes och Cloud-Native utveckling."
+  },
+  "header": {
+    "services": "Tjänster",
+    "expertise": "Expertis",
+    "contact": "Kontakt",
+    "toggleDarkMode": "Växla mörkt läge",
+    "toggleMenu": "Växla meny",
+    "logoAlt": "CodeCentra - IT-konsulttjänster för företag"
+  },
+  "hero": {
+    "title": "Mjukvaru- & IT-lösningar",
+    "titleLine2": "för företag",
+    "subtitle": "Microservices, Kubernetes och Cloud-Native lösningar för moderna organisationer.",
+    "cta": "Boka en konsultation"
+  },
+  "services": {
+    "title": "Vad vi gör",
+    "subtitle": "Omfattande lösningar för modern företagsinfrastruktur",
+    "cloudArchitecture": {
+      "name": "Molnarkitektur",
+      "description": "Skalbara molnlösningar"
+    },
+    "kubernetes": {
+      "name": "Kubernetes",
+      "description": "Container-orkestrering"
+    },
+    "cicd": {
+      "name": "CI/CD Pipelines",
+      "description": "Automatiserade leveranser"
+    },
+    "security": {
+      "name": "Säkerhet",
+      "description": "Företagsklassat skydd"
+    },
+    "performance": {
+      "name": "Prestanda",
+      "description": "Optimerade system"
+    },
+    "devops": {
+      "name": "DevOps",
+      "description": "Effektiviserad drift"
+    }
+  },
+  "expertise": {
+    "title": "Vår expertis",
+    "subtitle": "Djup teknisk kunskap över hela stacken av modern företagsinfrastruktur",
+    "backend": {
+      "title": "Backend-utveckling",
+      "description": "Bygger robusta, skalbara API:er och serverapplikationer med moderna ramverk och bästa praxis."
+    },
+    "database": {
+      "title": "Databasarkitektur",
+      "description": "Designar effektiva databasscheman och optimerar frågor för högpresterande datahantering."
+    },
+    "microservices": {
+      "title": "Microservices",
+      "description": "Omvandlar monolitiska applikationer till skalbara, underhållbara microservice-arkitekturer."
+    },
+    "cloud": {
+      "title": "Molninfrastruktur",
+      "description": "Driftsätter och hanterar cloud-native lösningar hos ledande molnleverantörer."
+    },
+    "integration": {
+      "title": "Systemintegration",
+      "description": "Kopplar samman olika system och möjliggör sömlöst dataflöde i din organisation."
+    },
+    "monitoring": {
+      "title": "Övervakning & Observabilitet",
+      "description": "Implementerar omfattande övervakning, loggning och larm för systemtillförlitlighet."
+    }
+  },
+  "contact": {
+    "title": "Låt oss samarbeta",
+    "subtitle": "Redo att transformera din infrastruktur? Kontakta vårt team."
+  },
+  "footer": {
+    "description": "Mjukvaru- och IT-lösningar för företag. Betrodda av branschledare.",
+    "navigation": "Navigation",
+    "services": "Tjänster",
+    "expertise": "Expertis",
+    "contact": "Kontakt",
+    "copyright": "CodeCentra. Alla rättigheter förbehållna.",
+    "linkedin": "LinkedIn",
+    "email": "E-post"
+  }
+}

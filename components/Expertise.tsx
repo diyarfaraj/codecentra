@@ -9,47 +9,50 @@ import {
   Layers,
   Monitor
 } from 'lucide-react'
-
-const expertise = [
-  {
-    title: 'Backend Development',
-    description: 'Building robust, scalable APIs and server-side applications with modern frameworks and best practices.',
-    icon: Server,
-    skills: ['.NET', 'Node.js', 'Python'],
-  },
-  {
-    title: 'Database Architecture',
-    description: 'Designing efficient database schemas and optimizing queries for high-performance data management.',
-    icon: Database,
-    skills: ['MSSQL Server', 'PostgreSQL', 'MongoDB', 'Redis'],
-  },
-  {
-    title: 'Microservices',
-    description: 'Decomposing monolithic applications into scalable, maintainable microservice architectures.',
-    icon: Layers,
-    skills: ['Docker', 'Kubernetes', 'API Gateway'],
-  },
-  {
-    title: 'Cloud Infrastructure',
-    description: 'Deploying and managing cloud-native solutions across major cloud providers.',
-    icon: Globe,
-    skills: ['AWS', 'Azure', 'GCP'],
-  },
-  {
-    title: 'System Integration',
-    description: 'Connecting disparate systems and enabling seamless data flow across your organization.',
-    icon: Code2,
-    skills: ['REST APIs', 'GraphQL', 'gRPC', 'Message Queues'],
-  },
-  {
-    title: 'Monitoring & Observability',
-    description: 'Implementing comprehensive monitoring, logging, and alerting for system reliability.',
-    icon: Monitor,
-    skills: ['Prometheus', 'Grafana', 'ELK Stack'],
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function Expertise() {
+  const t = useTranslations('expertise')
+
+  const expertise = [
+    {
+      title: t('backend.title'),
+      description: t('backend.description'),
+      icon: Server,
+      skills: ['.NET', 'Node.js', 'Python'],
+    },
+    {
+      title: t('database.title'),
+      description: t('database.description'),
+      icon: Database,
+      skills: ['MSSQL Server', 'PostgreSQL', 'MongoDB', 'Redis'],
+    },
+    {
+      title: t('microservices.title'),
+      description: t('microservices.description'),
+      icon: Layers,
+      skills: ['Docker', 'Kubernetes', 'API Gateway'],
+    },
+    {
+      title: t('cloud.title'),
+      description: t('cloud.description'),
+      icon: Globe,
+      skills: ['AWS', 'Azure', 'GCP'],
+    },
+    {
+      title: t('integration.title'),
+      description: t('integration.description'),
+      icon: Code2,
+      skills: ['REST APIs', 'GraphQL', 'gRPC', 'Message Queues'],
+    },
+    {
+      title: t('monitoring.title'),
+      description: t('monitoring.description'),
+      icon: Monitor,
+      skills: ['Prometheus', 'Grafana', 'ELK Stack'],
+    },
+  ]
+
   return (
     <section id="expertise" className="py-24 bg-white dark:bg-primary-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,10 +64,10 @@ export default function Expertise() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 dark:text-white mb-4">
-            Our Expertise
+            {t('title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-            Deep technical knowledge across the full stack of modern enterprise infrastructure
+            {t('subtitle')}
           </p>
         </motion.div>
 

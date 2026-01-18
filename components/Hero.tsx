@@ -1,12 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const video2Ref = useRef<HTMLVideoElement>(null)
+  const t = useTranslations('hero')
 
   useEffect(() => {
     const video1 = videoRef.current
@@ -120,22 +121,21 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-900 dark:text-white leading-tight mb-4 md:mb-6">
-            Software & IT Solutions
+            {t('title')}
             <br />
-            for Enterprise
+            {t('titleLine2')}
           </h1>
 
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-6 md:mb-8">
-            Microservices, Kubernetes, and Cloud-Native
-            solutions for modern organizations.
+            {t('subtitle')}
           </p>
 
-          <Link
+          <a
             href="#contact"
             className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-accent-500 rounded-md hover:bg-accent-600 transition-colors"
           >
-            Schedule a Consultation
-          </Link>
+            {t('cta')}
+          </a>
         </motion.div>
       </div>
     </section>

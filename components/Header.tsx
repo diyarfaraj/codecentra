@@ -1,21 +1,24 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Moon, Sun } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { useTheme } from './ThemeProvider'
-
-const navItems = [
-  { name: 'Services', href: '#services' },
-  { name: 'Expertise', href: '#expertise' },
-]
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const t = useTranslations('header')
+
+  const navItems = [
+    { name: t('services'), href: '#services' },
+    { name: t('expertise'), href: '#expertise' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +45,7 @@ export default function Header() {
             >
               <Image
                 src="/images/logo-transparent.png"
-                alt="CodeCentra - Enterprise IT Consulting"
+                alt={t('logoAlt')}
                 width={240}
                 height={60}
                 className="h-10 sm:h-11 md:h-12 w-auto dark:brightness-0 dark:invert"
@@ -60,14 +63,24 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link
+                <a
                   href={item.href}
                   className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
                 >
                   {item.name}
-                </Link>
+                </a>
               </motion.div>
             ))}
+
+            {/* Language Switcher */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <LanguageSwitcher />
+            </motion.div>
+
             {/* Dark Mode Toggle */}
             <motion.button
               initial={{ opacity: 0, y: -10 }}
@@ -75,7 +88,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.25 }}
               onClick={toggleTheme}
               className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors"
-              aria-label="Toggle dark mode"
+              aria-label={t('toggleDarkMode')}
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
@@ -85,21 +98,22 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Link
+              <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-accent-400 rounded-md hover:bg-accent-500 transition-colors"
               >
-                Contact
-              </Link>
+                {t('contact')}
+              </a>
             </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors"
-              aria-label="Toggle dark mode"
+              aria-label={t('toggleDarkMode')}
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -107,7 +121,7 @@ export default function Header() {
               type="button"
               className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={t('toggleMenu')}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -127,22 +141,22 @@ export default function Header() {
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   className="block text-gray-700 dark:text-gray-300 font-semibold hover:text-accent-500 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
-              <Link
+              <a
                 href="#contact"
                 className="block w-full text-center px-5 py-2.5 text-sm font-semibold text-white bg-accent-400 rounded-md hover:bg-accent-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
-              </Link>
+                {t('contact')}
+              </a>
             </div>
           </motion.div>
         )}

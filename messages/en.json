@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "CodeCentra | Software & IT Solutions for Enterprise",
+    "titleTemplate": "{title} | CodeCentra",
+    "description": "Software and IT solutions for enterprise. Specialized in Microservices, Kubernetes, and Cloud-Native development.",
+    "ogDescription": "Software and IT solutions for enterprise. Microservices, Kubernetes, and Cloud-Native development."
+  },
+  "header": {
+    "services": "Services",
+    "expertise": "Expertise",
+    "contact": "Contact",
+    "toggleDarkMode": "Toggle dark mode",
+    "toggleMenu": "Toggle menu",
+    "logoAlt": "CodeCentra - Enterprise IT Consulting"
+  },
+  "hero": {
+    "title": "Software & IT Solutions",
+    "titleLine2": "for Enterprise",
+    "subtitle": "Microservices, Kubernetes, and Cloud-Native solutions for modern organizations.",
+    "cta": "Schedule a Consultation"
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "Comprehensive solutions for modern enterprise infrastructure",
+    "cloudArchitecture": {
+      "name": "Cloud Architecture",
+      "description": "Scalable cloud solutions"
+    },
+    "kubernetes": {
+      "name": "Kubernetes",
+      "description": "Container orchestration"
+    },
+    "cicd": {
+      "name": "CI/CD Pipelines",
+      "description": "Automated deployments"
+    },
+    "security": {
+      "name": "Security",
+      "description": "Enterprise-grade protection"
+    },
+    "performance": {
+      "name": "Performance",
+      "description": "Optimized systems"
+    },
+    "devops": {
+      "name": "DevOps",
+      "description": "Streamlined operations"
+    }
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "subtitle": "Deep technical knowledge across the full stack of modern enterprise infrastructure",
+    "backend": {
+      "title": "Backend Development",
+      "description": "Building robust, scalable APIs and server-side applications with modern frameworks and best practices."
+    },
+    "database": {
+      "title": "Database Architecture",
+      "description": "Designing efficient database schemas and optimizing queries for high-performance data management."
+    },
+    "microservices": {
+      "title": "Microservices",
+      "description": "Decomposing monolithic applications into scalable, maintainable microservice architectures."
+    },
+    "cloud": {
+      "title": "Cloud Infrastructure",
+      "description": "Deploying and managing cloud-native solutions across major cloud providers."
+    },
+    "integration": {
+      "title": "System Integration",
+      "description": "Connecting disparate systems and enabling seamless data flow across your organization."
+    },
+    "monitoring": {
+      "title": "Monitoring & Observability",
+      "description": "Implementing comprehensive monitoring, logging, and alerting for system reliability."
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to transform your infrastructure? Get in touch with our team."
+  },
+  "footer": {
+    "description": "Software and IT solutions for enterprise. Trusted by industry leaders.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "expertise": "Expertise",
+    "contact": "Contact",
+    "copyright": "CodeCentra. All rights reserved.",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  }
+}

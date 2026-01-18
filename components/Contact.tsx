@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { Mail, ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function Contact() {
+  const t = useTranslations('contact')
+
   return (
     <section id="contact" className="py-24 bg-primary-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,11 +22,11 @@ export default function Contact() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Let&apos;s Work Together
+            {t('title')}
           </h2>
 
           <p className="text-lg text-primary-300 mb-10">
-            Ready to transform your infrastructure? Get in touch with our team.
+            {t('subtitle')}
           </p>
 
           <a

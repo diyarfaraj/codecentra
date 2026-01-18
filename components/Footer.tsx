@@ -1,27 +1,30 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Twitter, Github, Mail } from 'lucide-react'
-
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/codecentra-sweden-ab/', icon: Linkedin },
-  { name: 'Email', href: 'mailto:contact@codecentra.se', icon: Mail },
-]
-
-const footerLinks = [
-  {
-    title: 'Navigation',
-    links: [
-      { name: 'Services', href: '#services' },
-      { name: 'Expertise', href: '#expertise' },
-      { name: 'Contact', href: '#contact' },
-    ],
-  },
-]
+import { Linkedin, Mail } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 
 export default function Footer() {
+  const t = useTranslations('footer')
+
+  const socialLinks = [
+    { name: t('linkedin'), href: 'https://www.linkedin.com/company/codecentra-sweden-ab/', icon: Linkedin },
+    { name: t('email'), href: 'mailto:contact@codecentra.se', icon: Mail },
+  ]
+
+  const footerLinks = [
+    {
+      title: t('navigation'),
+      links: [
+        { name: t('services'), href: '#services' },
+        { name: t('expertise'), href: '#expertise' },
+        { name: t('contact'), href: '#contact' },
+      ],
+    },
+  ]
+
   return (
     <footer className="bg-primary-950 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,8 +50,7 @@ export default function Footer() {
               </Link>
 
               <p className="text-primary-300 text-sm max-w-sm mb-6">
-                Software and IT solutions for enterprise.
-                Trusted by industry leaders.
+                {t('description')}
               </p>
 
               {/* Social Links */}
@@ -84,12 +86,12 @@ export default function Footer() {
               <ul className="space-y-3">
                 {column.links.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-primary-300 hover:text-accent-400 text-sm transition-colors"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -100,7 +102,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-primary-800">
           <p className="text-primary-400 text-sm text-center">
-            &copy; {new Date().getFullYear()} CodeCentra. All rights reserved.
+            &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
         </div>
       </div>
