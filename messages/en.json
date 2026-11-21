@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "CodeCentra | Agent-first software development, backend and DevOps",
+    "title": "CodeCentra | Agentic-first software development, backend and DevOps",
     "titleTemplate": "{title} | CodeCentra",
     "description": "We bring agentic workflows to your team and build backend, Kubernetes and DevOps that work in production. Agentic development with tests and evals as gates.",
     "ogDescription": "Agentic development for teams. We also build backend, Kubernetes and DevOps that work in production."
@@ -16,7 +16,7 @@
     "logoAlt": "CodeCentra"
   },
   "hero": {
-    "title": "Agent-first software development",
+    "title": "Agentic-first software development",
     "titleLine2": "that holds up in production",
     "subtitle": "We bring agentic workflows to your team. We also build the backend, Kubernetes and DevOps setup that keeps it running.",
     "cta": "Book a call"
@@ -25,7 +25,7 @@
     "title": "What we do",
     "subtitle": "From the first agent pilot to running in Kubernetes.",
     "agentWorkflow": {
-      "name": "Agent-first in your environment",
+      "name": "Agentic-first in your environment",
       "description": "We set up coding agents in your repos with rules in the repo, CI gates and review. Your team stays in control of every change."
     },
     "softwareFactory": {
@@ -42,7 +42,7 @@
     },
     "training": {
       "name": "Training and coaching",
-      "description": "We teach your team to work agent-first. Workshops, pair programming and support in your own repos."
+      "description": "We teach your team to work agentic-first. Workshops, pair programming and support in your own repos."
     },
     "classic": {
       "name": "Backend, Kubernetes and DevOps",
@@ -99,8 +99,8 @@
   },
   "products": {
     "title": "Our products",
-    "subtitle": "We build our own products the same way we help clients. Both are built agent-first by us.",
-    "badge": "Built agent-first",
+    "subtitle": "We build our own products the same way we help clients. Both are built agentic-first by us.",
+    "badge": "Built agentic-first",
     "saaty": {
       "name": "Saaty",
       "description": "Booking platform with AI agents that help customers book and get answers to their questions.",
@@ -117,7 +117,7 @@
     "subtitle": "Want to get started with agents, or need help with backend and operations? Send us an email."
   },
   "footer": {
-    "description": "Agent-first software development, backend and DevOps. A Swedish consultancy that also builds its own products.",
+    "description": "Agentic-first software development, backend and DevOps. A Swedish consultancy that also builds its own products.",
     "navigation": "Navigation",
     "services": "Services",
     "howWeWork": "How we work",

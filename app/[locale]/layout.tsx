@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     keywords: [
       'agentic development',
-      'agent-first development',
+      'agentic-first development',
       'AI agents',
       'coding agents',
       'software factory',
@@ -131,8 +131,8 @@ export default async function RootLayout({ children, params }: Props) {
     name: 'CodeCentra',
     description:
       locale === 'sv'
-        ? 'Agent-först mjukvaruutveckling. Vi inför agentiska arbetssätt i team och bygger backend, Kubernetes och DevOps som fungerar i produktion.'
-        : 'Agent-first software development. We bring agentic workflows to teams and build backend, Kubernetes and DevOps that work in production.',
+        ? 'Agentic-först mjukvaruutveckling. Vi inför agentiska arbetssätt i team och bygger backend, Kubernetes och DevOps som fungerar i produktion.'
+        : 'Agentic-first software development. We bring agentic workflows to teams and build backend, Kubernetes and DevOps that work in production.',
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
     sameAs: ['https://www.linkedin.com/company/codecentra-sweden-ab/'],

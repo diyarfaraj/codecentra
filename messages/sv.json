@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "CodeCentra | Agent-först mjukvaruutveckling, backend och DevOps",
+    "title": "CodeCentra | Agentic-först mjukvaruutveckling, backend och DevOps",
     "titleTemplate": "{title} | CodeCentra",
     "description": "Vi inför agentiska arbetssätt i ert team och bygger backend, Kubernetes och DevOps som fungerar i produktion. Agentic development med tester och evals som grindar.",
     "ogDescription": "Agentic development för team. Vi bygger också backend, Kubernetes och DevOps som fungerar i produktion."
@@ -16,7 +16,7 @@
     "logoAlt": "CodeCentra"
   },
   "hero": {
-    "title": "Agent-först mjukvaruutveckling",
+    "title": "Agentic-först mjukvaruutveckling",
     "titleLine2": "som håller i drift",
     "subtitle": "Vi inför agentiska arbetssätt i ert team och bygger backend, Kubernetes och DevOps som fungerar i produktion.",
     "cta": "Boka ett samtal"
@@ -25,7 +25,7 @@
     "title": "Vad vi gör",
     "subtitle": "Från den första agentpiloten till drift i Kubernetes.",
     "agentWorkflow": {
-      "name": "Agent-först i er miljö",
+      "name": "Agentic-först i er miljö",
       "description": "Vi sätter upp kodagenter i era repon med regler i repot, CI-grindar och granskning. Teamet har kontroll över varje ändring."
     },
     "softwareFactory": {
@@ -42,7 +42,7 @@
     },
     "training": {
       "name": "Utbildning och coachning",
-      "description": "Vi lär ert team att arbeta agent-först. Workshops, parprogrammering och stöd i era egna repon."
+      "description": "Vi lär ert team att arbeta agentic-först. Workshops, parprogrammering och stöd i era egna repon."
     },
     "classic": {
       "name": "Backend, Kubernetes och DevOps",
@@ -99,8 +99,8 @@
   },
   "products": {
     "title": "Våra produkter",
-    "subtitle": "Vi bygger egna produkter på samma sätt som vi hjälper kunder. Båda är byggda agent-först av oss.",
-    "badge": "Byggd agent-först",
+    "subtitle": "Vi bygger egna produkter på samma sätt som vi hjälper kunder. Båda är byggda agentic-först av oss.",
+    "badge": "Byggd agentic-först",
     "saaty": {
       "name": "Saaty",
       "description": "Bokningsplattform med AI-agenter som hjälper kunder att boka och få svar på sina frågor.",
@@ -117,7 +117,7 @@
     "subtitle": "Vill ni komma igång med agenter, eller behöver ni hjälp med backend och drift? Skriv till oss."
   },
   "footer": {
-    "description": "Agent-först mjukvaruutveckling, backend och DevOps. Ett svenskt konsultbolag som även bygger egna produkter.",
+    "description": "Agentic-först mjukvaruutveckling, backend och DevOps. Ett svenskt konsultbolag som även bygger egna produkter.",
     "navigation": "Navigation",
     "services": "Tjänster",
     "howWeWork": "Arbetssätt",
