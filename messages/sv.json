@@ -1,89 +1,128 @@
 {
   "metadata": {
-    "title": "CodeCentra | Mjukvaru- & IT-lösningar för företag",
+    "title": "CodeCentra | Agentic-först mjukvaruutveckling, backend och DevOps",
     "titleTemplate": "{title} | CodeCentra",
-    "description": "Mjukvaru- och IT-lösningar för företag. Specialiserade inom Microservices, Kubernetes och Cloud-Native utveckling.",
-    "ogDescription": "Mjukvaru- och IT-lösningar för företag. Microservices, Kubernetes och Cloud-Native utveckling."
+    "description": "Vi inför agentiska arbetssätt i ert team och bygger backend, Kubernetes och DevOps som fungerar i produktion. Agentic development med tester och evals som grindar.",
+    "ogDescription": "Agentic development för team. Vi bygger också backend, Kubernetes och DevOps som fungerar i produktion."
   },
   "header": {
     "services": "Tjänster",
+    "howWeWork": "Arbetssätt",
     "expertise": "Expertis",
+    "products": "Produkter",
     "contact": "Kontakt",
     "toggleDarkMode": "Växla mörkt läge",
     "toggleMenu": "Växla meny",
-    "logoAlt": "CodeCentra - IT-konsulttjänster för företag"
+    "logoAlt": "CodeCentra"
   },
   "hero": {
-    "title": "Mjukvaru- & IT-lösningar",
-    "titleLine2": "för företag",
-    "subtitle": "Microservices, Kubernetes och Cloud-Native lösningar för moderna organisationer.",
-    "cta": "Boka en konsultation"
+    "title": "Agentic-först mjukvaruutveckling",
+    "titleLine2": "som håller i drift",
+    "subtitle": "Vi inför agentiska arbetssätt i ert team och bygger backend, Kubernetes och DevOps som fungerar i produktion.",
+    "cta": "Boka ett samtal"
   },
   "services": {
     "title": "Vad vi gör",
-    "subtitle": "Omfattande lösningar för modern företagsinfrastruktur",
-    "cloudArchitecture": {
-      "name": "Molnarkitektur",
-      "description": "Skalbara molnlösningar"
+    "subtitle": "Från den första agentpiloten till drift i Kubernetes.",
+    "agentWorkflow": {
+      "name": "Agentic-först i er miljö",
+      "description": "Vi sätter upp kodagenter i era repon med regler i repot, CI-grindar och granskning. Teamet har kontroll över varje ändring."
     },
-    "kubernetes": {
-      "name": "Kubernetes",
-      "description": "Container-orkestrering"
+    "softwareFactory": {
+      "name": "Mjukvarufabrik",
+      "description": "Pipelines där agenter skriver koden. Tester och evals är grindar, och människor äger arkitekturen."
     },
-    "cicd": {
-      "name": "CI/CD Pipelines",
-      "description": "Automatiserade leveranser"
+    "aiProduct": {
+      "name": "AI i er produkt",
+      "description": "Vi bygger agenter och RAG i er produkt. Evals mäter kvaliteten, och skydd mot prompt injection finns med från start."
     },
-    "security": {
-      "name": "Säkerhet",
-      "description": "Företagsklassat skydd"
+    "legacy": {
+      "name": "Legacy-modernisering",
+      "description": "Agenter skriver om gammal kod i små steg. Tester visar att allt fungerar som förut."
     },
-    "performance": {
-      "name": "Prestanda",
-      "description": "Optimerade system"
+    "training": {
+      "name": "Utbildning och coachning",
+      "description": "Vi lär ert team att arbeta agentic-först. Workshops, parprogrammering och stöd i era egna repon."
     },
-    "devops": {
-      "name": "DevOps",
-      "description": "Effektiviserad drift"
+    "classic": {
+      "name": "Backend, Kubernetes och DevOps",
+      "description": "Det klassiska: backend i .NET, Linux, Kubernetes och CI/CD som går att lita på i drift."
+    }
+  },
+  "howWeWork": {
+    "title": "Så arbetar vi",
+    "subtitle": "Vi börjar i liten skala, mäter och skalar upp först när det fungerar.",
+    "map": {
+      "title": "Kartlägg",
+      "description": "Vi går igenom repo, pipeline och risker. Sedan väljer vi var en pilot gör mest nytta."
+    },
+    "pilot": {
+      "title": "Pilot",
+      "description": "Ett repo får agenter, regler och grindar. Teamet arbetar med riktiga uppgifter."
+    },
+    "measure": {
+      "title": "Mät",
+      "description": "Tester, evals och ledtid visar vad som blev bättre. Vi justerar det som inte håller."
+    },
+    "scale": {
+      "title": "Skala ut",
+      "description": "Arbetssättet sprids till fler repon. Teamet tar över och äger det själva."
     }
   },
   "expertise": {
     "title": "Vår expertis",
-    "subtitle": "Djup teknisk kunskap över hela stacken av modern företagsinfrastruktur",
+    "subtitle": "Agenter gör mest nytta på en stabil grund. Den bygger vi också.",
     "backend": {
       "title": "Backend-utveckling",
-      "description": "Bygger robusta, skalbara API:er och serverapplikationer med moderna ramverk och bästa praxis."
+      "description": "Skalbara API:er och tjänster i .NET, Node.js och Python, med databaser som klarar verklig last."
     },
-    "database": {
-      "title": "Databasarkitektur",
-      "description": "Designar effektiva databasscheman och optimerar frågor för högpresterande datahantering."
+    "ai": {
+      "title": "AI engineering",
+      "description": "Agenter, RAG och evals som går att mäta. Vi kopplar modeller till era system via MCP."
     },
     "microservices": {
       "title": "Microservices",
-      "description": "Omvandlar monolitiska applikationer till skalbara, underhållbara microservice-arkitekturer."
+      "description": "Vi delar upp monoliter i tjänster som är lätta att underhålla och skala."
     },
     "cloud": {
       "title": "Molninfrastruktur",
-      "description": "Driftsätter och hanterar cloud-native lösningar hos ledande molnleverantörer."
+      "description": "Vi driftsätter och sköter cloud-native lösningar hos de stora molnleverantörerna."
     },
     "integration": {
       "title": "Systemintegration",
-      "description": "Kopplar samman olika system och möjliggör sömlöst dataflöde i din organisation."
+      "description": "Vi kopplar ihop era system så att data kommer dit den behövs."
     },
     "monitoring": {
-      "title": "Övervakning & Observabilitet",
-      "description": "Implementerar omfattande övervakning, loggning och larm för systemtillförlitlighet."
+      "title": "Övervakning och observerbarhet",
+      "description": "Loggning, mätvärden och larm som visar problem innan användarna märker dem."
+    }
+  },
+  "products": {
+    "title": "Våra produkter",
+    "subtitle": "Vi bygger egna produkter på samma sätt som vi hjälper kunder. Båda är byggda agentic-först av oss.",
+    "badge": "Byggd agentic-först",
+    "saaty": {
+      "name": "Saaty",
+      "description": "Bokningsplattform med AI-agenter som hjälper kunder att boka och få svar på sina frågor.",
+      "link": "Besök saatybooking.com"
+    },
+    "kraftsmedjan": {
+      "name": "Kraftsmedjan",
+      "description": "Utbildningsplattform i elkraft och automation, med en AI-handledare som svarar på frågor under kursen.",
+      "link": "Besök kraftsmedjan.se"
     }
   },
   "contact": {
     "title": "Låt oss samarbeta",
-    "subtitle": "Redo att transformera din infrastruktur? Kontakta vårt team."
+    "subtitle": "Vill ni komma igång med agenter, eller behöver ni hjälp med backend och drift? Skriv till oss."
   },
   "footer": {
-    "description": "Mjukvaru- och IT-lösningar för företag. Betrodda av branschledare.",
+    "description": "Agentic-först mjukvaruutveckling, backend och DevOps. Ett svenskt konsultbolag som även bygger egna produkter.",
     "navigation": "Navigation",
     "services": "Tjänster",
+    "howWeWork": "Arbetssätt",
     "expertise": "Expertis",
+    "products": "Produkter",
     "contact": "Kontakt",
     "copyright": "CodeCentra. Alla rättigheter förbehållna.",
     "linkedin": "LinkedIn",

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://codecentra.com/sitemap.xml',
+    sitemap: 'https://codecentra.se/sitemap.xml',
   }
 }

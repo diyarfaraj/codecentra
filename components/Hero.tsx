@@ -74,7 +74,7 @@ export default function Hero() {
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* Second video for seamless loop */}
+        {/* Second video for a smooth loop */}
         <video
           ref={video2Ref}
           muted

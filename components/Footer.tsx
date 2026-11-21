@@ -19,7 +19,9 @@ export default function Footer() {
       title: t('navigation'),
       links: [
         { name: t('services'), href: '#services' },
+        { name: t('howWeWork'), href: '#how-we-work' },
         { name: t('expertise'), href: '#expertise' },
+        { name: t('products'), href: '#products' },
         { name: t('contact'), href: '#contact' },
       ],
     },
@@ -42,7 +44,7 @@ export default function Footer() {
               <Link href="/" className="inline-block mb-4">
                 <Image
                   src="/images/logo-transparent.png"
-                  alt="CodeCentra - Software & IT Solutions"
+                  alt="CodeCentra"
                   width={240}
                   height={60}
                   className="h-10 sm:h-11 md:h-12 w-auto brightness-0 invert"

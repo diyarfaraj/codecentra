@@ -1,89 +1,128 @@
 {
   "metadata": {
-    "title": "CodeCentra | Software & IT Solutions for Enterprise",
+    "title": "CodeCentra | Agentic-first software development, backend and DevOps",
     "titleTemplate": "{title} | CodeCentra",
-    "description": "Software and IT solutions for enterprise. Specialized in Microservices, Kubernetes, and Cloud-Native development.",
-    "ogDescription": "Software and IT solutions for enterprise. Microservices, Kubernetes, and Cloud-Native development."
+    "description": "We bring agentic workflows to your team and build backend, Kubernetes and DevOps that work in production. Agentic development with tests and evals as gates.",
+    "ogDescription": "Agentic development for teams. We also build backend, Kubernetes and DevOps that work in production."
   },
   "header": {
     "services": "Services",
+    "howWeWork": "How we work",
     "expertise": "Expertise",
+    "products": "Products",
     "contact": "Contact",
     "toggleDarkMode": "Toggle dark mode",
     "toggleMenu": "Toggle menu",
-    "logoAlt": "CodeCentra - Enterprise IT Consulting"
+    "logoAlt": "CodeCentra"
   },
   "hero": {
-    "title": "Software & IT Solutions",
-    "titleLine2": "for Enterprise",
-    "subtitle": "Microservices, Kubernetes, and Cloud-Native solutions for modern organizations.",
-    "cta": "Schedule a Consultation"
+    "title": "Agentic-first software development",
+    "titleLine2": "that holds up in production",
+    "subtitle": "We bring agentic workflows to your team. We also build the backend, Kubernetes and DevOps setup that keeps it running.",
+    "cta": "Book a call"
   },
   "services": {
-    "title": "What We Do",
-    "subtitle": "Comprehensive solutions for modern enterprise infrastructure",
-    "cloudArchitecture": {
-      "name": "Cloud Architecture",
-      "description": "Scalable cloud solutions"
+    "title": "What we do",
+    "subtitle": "From the first agent pilot to running in Kubernetes.",
+    "agentWorkflow": {
+      "name": "Agentic-first in your environment",
+      "description": "We set up coding agents in your repos with rules in the repo, CI gates and review. Your team stays in control of every change."
     },
-    "kubernetes": {
-      "name": "Kubernetes",
-      "description": "Container orchestration"
+    "softwareFactory": {
+      "name": "Software factory",
+      "description": "Pipelines where agents write the code. Tests and evals act as gates, and people own the architecture."
     },
-    "cicd": {
-      "name": "CI/CD Pipelines",
-      "description": "Automated deployments"
+    "aiProduct": {
+      "name": "AI in your product",
+      "description": "We build agents and RAG into your product. Evals measure quality, and prompt injection defenses are there from the start."
     },
-    "security": {
-      "name": "Security",
-      "description": "Enterprise-grade protection"
+    "legacy": {
+      "name": "Legacy modernization",
+      "description": "Agents rewrite old code in small steps. Tests show that everything still works as before."
     },
-    "performance": {
-      "name": "Performance",
-      "description": "Optimized systems"
+    "training": {
+      "name": "Training and coaching",
+      "description": "We teach your team to work agentic-first. Workshops, pair programming and support in your own repos."
     },
-    "devops": {
-      "name": "DevOps",
-      "description": "Streamlined operations"
+    "classic": {
+      "name": "Backend, Kubernetes and DevOps",
+      "description": "The classic work: .NET backends, Linux, Kubernetes and CI/CD you can rely on in production."
+    }
+  },
+  "howWeWork": {
+    "title": "How we work",
+    "subtitle": "We start small, measure, and scale up only when it works.",
+    "map": {
+      "title": "Map",
+      "description": "We review your repo, pipeline and risks. Then we pick where a pilot helps most."
+    },
+    "pilot": {
+      "title": "Pilot",
+      "description": "One repo gets agents, rules and gates. The team works on real tasks."
+    },
+    "measure": {
+      "title": "Measure",
+      "description": "Tests, evals and lead time show what got better. We adjust what falls short."
+    },
+    "scale": {
+      "title": "Scale out",
+      "description": "The workflow spreads to more repos. Your team takes over and owns it."
     }
   },
   "expertise": {
-    "title": "Our Expertise",
-    "subtitle": "Deep technical knowledge across the full stack of modern enterprise infrastructure",
+    "title": "Our expertise",
+    "subtitle": "Agents do their best work on a solid foundation. We build that too.",
     "backend": {
-      "title": "Backend Development",
-      "description": "Building robust, scalable APIs and server-side applications with modern frameworks and best practices."
+      "title": "Backend development",
+      "description": "Scalable APIs and services in .NET, Node.js and Python, with databases that handle real load."
     },
-    "database": {
-      "title": "Database Architecture",
-      "description": "Designing efficient database schemas and optimizing queries for high-performance data management."
+    "ai": {
+      "title": "AI engineering",
+      "description": "Agents, RAG and evals you can measure. We connect models to your systems through MCP."
     },
     "microservices": {
       "title": "Microservices",
-      "description": "Decomposing monolithic applications into scalable, maintainable microservice architectures."
+      "description": "We break monoliths into services that are easy to maintain and scale."
     },
     "cloud": {
-      "title": "Cloud Infrastructure",
-      "description": "Deploying and managing cloud-native solutions across major cloud providers."
+      "title": "Cloud infrastructure",
+      "description": "We deploy and run cloud-native systems on the major cloud providers."
     },
     "integration": {
-      "title": "System Integration",
-      "description": "Connecting disparate systems and enabling seamless data flow across your organization."
+      "title": "System integration",
+      "description": "We connect your systems so data gets where it needs to go."
     },
     "monitoring": {
-      "title": "Monitoring & Observability",
-      "description": "Implementing comprehensive monitoring, logging, and alerting for system reliability."
+      "title": "Monitoring and observability",
+      "description": "Logging, metrics and alerts that show problems before your users notice them."
+    }
+  },
+  "products": {
+    "title": "Our products",
+    "subtitle": "We build our own products the same way we help clients. Both are built agentic-first by us.",
+    "badge": "Built agentic-first",
+    "saaty": {
+      "name": "Saaty",
+      "description": "Booking platform with AI agents that help customers book and get answers to their questions.",
+      "link": "Visit saatybooking.com"
+    },
+    "kraftsmedjan": {
+      "name": "Kraftsmedjan",
+      "description": "Training platform for electrical power and automation, with an AI tutor that answers questions during the course.",
+      "link": "Visit kraftsmedjan.se"
     }
   },
   "contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Ready to transform your infrastructure? Get in touch with our team."
+    "title": "Let's work together",
+    "subtitle": "Want to get started with agents, or need help with backend and operations? Send us an email."
   },
   "footer": {
-    "description": "Software and IT solutions for enterprise. Trusted by industry leaders.",
+    "description": "Agentic-first software development, backend and DevOps. A Swedish consultancy that also builds its own products.",
     "navigation": "Navigation",
     "services": "Services",
+    "howWeWork": "How we work",
     "expertise": "Expertise",
+    "products": "Products",
     "contact": "Contact",
     "copyright": "CodeCentra. All rights reserved.",
     "linkedin": "LinkedIn",

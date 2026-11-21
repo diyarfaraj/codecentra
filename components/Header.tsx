@@ -17,7 +17,9 @@ export default function Header() {
 
   const navItems = [
     { name: t('services'), href: '#services' },
+    { name: t('howWeWork'), href: '#how-we-work' },
     { name: t('expertise'), href: '#expertise' },
+    { name: t('products'), href: '#products' },
   ]
 
   useEffect(() => {
@@ -55,7 +57,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -108,7 +110,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <LanguageSwitcher />
             <button
               onClick={toggleTheme}
@@ -137,7 +139,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-primary-950 border-t border-gray-100 dark:border-primary-800"
+            className="lg:hidden bg-white dark:bg-primary-950 border-t border-gray-100 dark:border-primary-800"
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item) => (
