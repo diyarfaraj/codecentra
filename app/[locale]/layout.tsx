@@ -13,6 +13,17 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const baseUrl = 'https://codecentra.se'
+
+const serviceKeys = [
+  'agentWorkflow',
+  'softwareFactory',
+  'aiProduct',
+  'legacy',
+  'training',
+  'classic',
+] as const
+
 type Props = {
   children: React.ReactNode
   params: Promise<{ locale: string }>
@@ -22,8 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'metadata' })
 
-  const baseUrl = 'https://codecentra.com'
-
   return {
     metadataBase: new URL(baseUrl),
     title: {
@@ -32,19 +41,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t('description'),
     keywords: [
-      'backend infrastructure',
-      'microservices consulting',
-      'kubernetes consulting',
-      'cloud-native solutions',
-      'enterprise architecture',
+      'agentic development',
+      'agent-first development',
+      'AI agents',
+      'coding agents',
+      'software factory',
+      'AI engineering',
+      'RAG',
+      'LLM evals',
+      'legacy modernization',
+      'backend development',
+      '.NET',
+      'Kubernetes consulting',
       'DevOps consulting',
-      'IT consulting',
-      'infrastructure as code',
-      'container orchestration',
-      'scalable systems',
-      'distributed systems',
-      'API design',
-      'system integration',
+      'Linux',
+      'CI/CD',
     ],
     authors: [{ name: 'CodeCentra' }],
     creator: 'CodeCentra',
@@ -72,7 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'CodeCentra - Software & IT Solutions',
+          alt: t('title'),
         },
       ],
     },
@@ -81,7 +92,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('title'),
       description: t('ogDescription'),
       images: ['/og-image.png'],
-      creator: '@codecentra',
     },
     icons: {
       icon: '/favicon.ico',
@@ -92,8 +102,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
-        en: `${baseUrl}/en`,
         sv: `${baseUrl}/sv`,
+        en: `${baseUrl}/en`,
+        'x-default': `${baseUrl}/sv`,
       },
     },
   }
@@ -112,6 +123,7 @@ export default async function RootLayout({ children, params }: Props) {
   }
 
   const messages = await getMessages()
+  const tServices = await getTranslations({ locale, namespace: 'services' })
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -119,28 +131,18 @@ export default async function RootLayout({ children, params }: Props) {
     name: 'CodeCentra',
     description:
       locale === 'sv'
-        ? 'Mjukvaru- och IT-lösningar för företag. Specialiserade inom Microservices, Kubernetes och Cloud-Native utveckling.'
-        : 'Software and IT solutions for enterprise. Specializing in Microservices, Kubernetes, and Cloud-Native development.',
-    url: 'https://codecentra.com',
-    logo: 'https://codecentra.com/logo.png',
-    sameAs: [
-      'https://linkedin.com/company/codecentra',
-      'https://twitter.com/codecentra',
-      'https://github.com/codecentra',
-    ],
+        ? 'Agent-först mjukvaruutveckling. Vi inför agentiska arbetssätt i team och bygger backend, Kubernetes och DevOps som fungerar i produktion.'
+        : 'Agent-first software development. We bring agentic workflows to teams and build backend, Kubernetes and DevOps that work in production.',
+    url: baseUrl,
+    logo: `${baseUrl}/images/logo.png`,
+    sameAs: ['https://www.linkedin.com/company/codecentra-sweden-ab/'],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
       email: 'contact@codecentra.se',
     },
     areaServed: 'Worldwide',
-    serviceType: [
-      'IT Consulting',
-      'Backend Infrastructure',
-      'Microservices Architecture',
-      'Kubernetes Consulting',
-      'Cloud-Native Development',
-    ],
+    serviceType: serviceKeys.map((key) => tServices(`${key}.name`)),
   }
 
   return (

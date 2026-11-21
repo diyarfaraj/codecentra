@@ -2,50 +2,32 @@
 
 import { motion } from 'framer-motion'
 import {
-  Cloud,
-  Container,
-  GitBranch,
-  Shield,
-  Zap,
-  Settings
+  Bot,
+  Factory,
+  Sparkles,
+  RefreshCw,
+  GraduationCap,
+  Server,
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-export default function ClientLogos() {
+const serviceKeys = [
+  { key: 'agentWorkflow', icon: Bot },
+  { key: 'softwareFactory', icon: Factory },
+  { key: 'aiProduct', icon: Sparkles },
+  { key: 'legacy', icon: RefreshCw },
+  { key: 'training', icon: GraduationCap },
+  { key: 'classic', icon: Server },
+] as const
+
+export default function Services() {
   const t = useTranslations('services')
 
-  const services = [
-    {
-      name: t('cloudArchitecture.name'),
-      description: t('cloudArchitecture.description'),
-      icon: Cloud,
-    },
-    {
-      name: t('kubernetes.name'),
-      description: t('kubernetes.description'),
-      icon: Container,
-    },
-    {
-      name: t('cicd.name'),
-      description: t('cicd.description'),
-      icon: GitBranch,
-    },
-    {
-      name: t('security.name'),
-      description: t('security.description'),
-      icon: Shield,
-    },
-    {
-      name: t('performance.name'),
-      description: t('performance.description'),
-      icon: Zap,
-    },
-    {
-      name: t('devops.name'),
-      description: t('devops.description'),
-      icon: Settings,
-    },
-  ]
+  const services = serviceKeys.map(({ key, icon }) => ({
+    name: t(`${key}.name`),
+    description: t(`${key}.description`),
+    icon,
+  }))
 
   return (
     <section id="services" className="py-20 bg-gray-50 dark:bg-primary-900">
@@ -66,7 +48,7 @@ export default function ClientLogos() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.name}
@@ -79,10 +61,10 @@ export default function ClientLogos() {
               <div className="w-14 h-14 rounded-full bg-accent-50 dark:bg-accent-900/30 flex items-center justify-center mb-4 group-hover:bg-accent-100 dark:group-hover:bg-accent-900/50 transition-colors">
                 <service.icon className="w-7 h-7 text-accent-500 dark:text-accent-400" />
               </div>
-              <h3 className="font-semibold text-primary-900 dark:text-white text-sm mb-1">
+              <h3 className="font-semibold text-primary-900 dark:text-white mb-2">
                 {service.name}
               </h3>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 {service.description}
               </p>
             </motion.div>

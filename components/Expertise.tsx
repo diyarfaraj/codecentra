@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import {
-  Database,
+  BrainCircuit,
   Server,
   Globe,
   Code2,
@@ -19,13 +19,13 @@ export default function Expertise() {
       title: t('backend.title'),
       description: t('backend.description'),
       icon: Server,
-      skills: ['.NET', 'Node.js', 'Python'],
+      skills: ['.NET', 'Node.js', 'Python', 'MSSQL Server', 'PostgreSQL', 'MongoDB', 'Redis'],
     },
     {
-      title: t('database.title'),
-      description: t('database.description'),
-      icon: Database,
-      skills: ['MSSQL Server', 'PostgreSQL', 'MongoDB', 'Redis'],
+      title: t('ai.title'),
+      description: t('ai.description'),
+      icon: BrainCircuit,
+      skills: ['Agents', 'RAG', 'Evals', 'MCP'],
     },
     {
       title: t('microservices.title'),
@@ -54,7 +54,7 @@ export default function Expertise() {
   ]
 
   return (
-    <section id="expertise" className="py-24 bg-white dark:bg-primary-950">
+    <section id="expertise" className="py-24 bg-gray-50 dark:bg-primary-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Expertise() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-gray-50 dark:bg-primary-900 rounded-2xl p-8 hover:bg-primary-900 dark:hover:bg-primary-800 transition-all duration-500"
+              className="group relative bg-white dark:bg-primary-800 rounded-2xl p-8 hover:bg-primary-900 dark:hover:bg-primary-700 transition-all duration-500"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/30 group-hover:bg-accent-500 flex items-center justify-center mb-6 transition-colors duration-500">
@@ -102,7 +102,7 @@ export default function Expertise() {
                 {item.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs font-medium bg-white dark:bg-primary-800 group-hover:bg-primary-800 dark:group-hover:bg-primary-700 text-primary-700 dark:text-gray-300 group-hover:text-accent-400 rounded-full transition-colors duration-500"
+                    className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-primary-700 group-hover:bg-primary-800 dark:group-hover:bg-primary-600 text-primary-700 dark:text-gray-300 group-hover:text-accent-400 rounded-full transition-colors duration-500"
                   >
                     {skill}
                   </span>
